@@ -5,7 +5,7 @@
 ;; Author: kuangdash <kuangdash@163.com>
 ;; Version: 1.0.0
 ;; URL: https://github.com/kuangdash/org-iv
-;; Package-Requires: ((impatient-mode "1.0.0") (org "8.0"))
+;; Package-Requires: ((impatient-mode "1.0.0") (org "8.0") (cl-lib "0.5"))
 
 ;;; Commentary:
 
@@ -17,6 +17,7 @@
 (require 'ox)
 (require 'impatient-mode)
 (require 'org-iv-config)
+(require 'cl-lib)
 
 ;;;###autoload
 (defun org-iv/immediate-view (config-name)
@@ -61,7 +62,7 @@
 (defun org-iv/manually-update ()
   "Use org-iv/immediate-view manually"
   (interactive)
-  (when (some (lambda (element) (equal element 'imp--on-change)) after-change-functions)
+  (when (cl-some (lambda (element) (equal element 'imp--on-change)) after-change-functions)
     (remove-hook 'after-change-functions 'imp--on-change t))
   (imp--on-change))
 
@@ -74,3 +75,4 @@
   (call-interactively 'org-iv/immediate-view))
 
 (provide 'org-iv)
+;;; org-iv.el ends here
