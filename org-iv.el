@@ -5,7 +5,7 @@
 ;; Author: kuangdash <kuangdash@163.com>
 ;; Version: 1.0.0
 ;; URL: https://github.com/kuangdash/org-iv
-;; Package-Requires: ((impatient-mode "1.0.0") (org-mode "8.0"))
+;; Package-Requires: ((impatient-mode "1.0.0") (org "8.0"))
 
 ;;; Commentary:
 
