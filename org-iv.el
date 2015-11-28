@@ -74,3 +74,4 @@
   (call-interactively 'org-iv/immediate-view))
 
 (provide 'org-iv)
+;;; org-iv.el ends here
