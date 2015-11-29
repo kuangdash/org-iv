@@ -5,7 +5,7 @@
 ;; Author: kuangdash <kuangdash@163.com>
 ;; Version: 1.0.0
 ;; URL: https://github.com/kuangdash/org-iv
-;; Package-Requires: ((impatient-mode "1.0.0") (org-mode "8.0"))
+;; Package-Requires: ((impatient-mode "1.0.0") (org "8.0") (cl-lib "0.5"))
 
 ;;; Commentary:
 
@@ -17,6 +17,7 @@
 (require 'ox)
 (require 'impatient-mode)
 (require 'org-iv-config)
+(require 'cl-lib)
 
 ;;;###autoload
 (defun org-iv/immediate-view (config-name)
