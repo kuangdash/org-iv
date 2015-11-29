@@ -62,7 +62,7 @@
 (defun org-iv/manually-update ()
   "Use org-iv/immediate-view manually"
   (interactive)
-  (when (some (lambda (element) (equal element 'imp--on-change)) after-change-functions)
+  (when (cl-some (lambda (element) (equal element 'imp--on-change)) after-change-functions)
     (remove-hook 'after-change-functions 'imp--on-change t))
   (imp--on-change))
 
@@ -75,3 +75,4 @@
   (call-interactively 'org-iv/immediate-view))
 
 (provide 'org-iv)
+;;; org-iv.el ends here
