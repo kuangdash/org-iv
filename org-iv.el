@@ -56,15 +56,16 @@
   (interactive)
   (when (imp-buffer-enabled-p (buffer-name))
     (impatient-mode)
-    (when (yes-or-no-p "Stop the running http-server?: ")
-      (httpd-stop))))
+    (remove-hook 'after-save-hook 'imp--on-change t)
+  (when (yes-or-no-p "Stop the running http-server?: ")
+    (httpd-stop))))
 
 (defun org-iv/manually-update ()
-  "Use org-iv/immediate-view manually"
+  "Use org-iv/immediate-view manually (update when save the file)"
   (interactive)
   (when (cl-some (lambda (element) (equal element 'imp--on-change)) after-change-functions)
     (remove-hook 'after-change-functions 'imp--on-change t))
-  (imp--on-change))
+  (add-hook 'after-save-hook 'imp--on-change nil t))
 
 (defun org-iv/restart-view ()
   "Restart org-iv/immediate-view"
