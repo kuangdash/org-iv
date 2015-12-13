@@ -2,8 +2,10 @@
 #+AUTHOR: 皐月中二
 #+EMAIL: kuangdash@163.com
 
+[[http://melpa.org/#/org-iv][file:http://melpa.org/packages/org-iv-badge.svg]]
+
 * Configure
-Install it by =git-clone=  (Termporarily don't upload it to =melpa=)
+Install it by =git-clone=  or from [[https://melpa.org][melpa]]
 #+BEGIN_SRC emacs-lisp
   (require 'org-iv)
 
