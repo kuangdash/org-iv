@@ -3,8 +3,8 @@
 ;; This is free and unencumbered software released into the public domain.
 
 ;; Author: kuangdash <kuangdash@163.com>
-;; Version: 1.0.0
-;; URL: https://github.com/kuangdash/org-iv
+;; Version: 1.0.1
+;; Homepage: https://github.com/kuangdash/org-iv
 ;; Package-Requires: ((impatient-mode "1.0.0") (org "8.0") (cl-lib "0.5"))
 
 ;;; Commentary:
