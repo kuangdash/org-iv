@@ -48,7 +48,7 @@ or, use 'use-package'
 
 * Usage
 Use commands =org-iv/immediate-view= and =org-iv/stop-immediate-view= , you can bind the key you like in emacs.
-p
+
 Or, when the org-file is being larger and larger, the response of org-iv will be slower and slower. In order to change the situation, you can use =org-iv/manually-update= command，and from that time，the html-file will be updated when you save the org-file.
 
 And, there is another method: =Narrow-to-region=. When org-iv is too slow, consider use it and use =org-iv/immediate-view= to see the region changes.

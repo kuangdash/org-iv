@@ -45,7 +45,8 @@
   (imp-set-user-filter `(lambda (org-file)
                           "For use impatient-mode"
                           (let ((html-string (with-current-buffer org-file
-                                               (org-export-as 'html nil nil t nil))))
+                                               (org-export-as (org-iv--get-config-option :backend)
+                                                              nil nil t nil))))
                             (insert org-iv--front-html-string
                                     "\n"
                                     html-string
@@ -90,7 +91,8 @@
     (setq org-iv--back-html-string (buffer-string)))
 
   (let ((html-string (with-current-buffer (current-buffer)
-                       (org-export-as 'html nil nil t nil))))
+                       (org-export-as (org-iv--get-config-option :backend)
+                                      nil nil t nil))))
     (find-file save-file-path)
     (insert org-iv--front-html-string
             "\n"
